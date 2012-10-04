@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{ED786CB2-959A-4085-BF23-27CD0EF1689D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>bf3 tweaker</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbxTweaker.Properties\Resources.cs" />
+    <Compile Include="dbxTweaker.Properties\Settings.cs" />
+    <Compile Include="dbxTweaker\ArrayRepeater.cs" />
+    <Compile Include="dbxTweaker\BiConverter.cs" />
+    <Compile Include="dbxTweaker\ByteArrayComparer.cs" />
+    <Compile Include="dbxTweaker\CasCat.cs" />
+    <Compile Include="dbxTweaker\CasHeader.cs" />
+    <Compile Include="dbxTweaker\CatEntry.cs" />
+    <Compile Include="dbxTweaker\Complex.cs" />
+    <Compile Include="dbxTweaker\ComplexConverter.cs" />
+    <Compile Include="dbxTweaker\ComplexDescriptor.cs" />
+    <Compile Include="dbxTweaker\CreateNewModDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dbxTweaker\DbxConverter.cs" />
+    <Compile Include="dbxTweaker\DbxFile.cs" />
+    <Compile Include="dbxTweaker\DbxHeader.cs" />
+    <Compile Include="dbxTweaker\DbxPropertyDescriptor.cs" />
+    <Compile Include="dbxTweaker\Enum.cs" />
+    <Compile Include="dbxTweaker\EnumConverter.cs" />
+    <Compile Include="dbxTweaker\Field.cs" />
+    <Compile Include="dbxTweaker\FieldDescriptor.cs" />
+    <Compile Include="dbxTweaker\FieldType.cs" />
+    <Compile Include="dbxTweaker\FieldTypeDescriptor.cs" />
+    <Compile Include="dbxTweaker\InstanceRepeater.cs" />
+    <Compile Include="dbxTweaker\loadingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dbxTweaker\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dbxTweaker\Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dbxTweaker.Properties\Resources.resources" />
+    <EmbeddedResource Include="dbxTweaker\CreateNewModDialog.resources" />
+    <EmbeddedResource Include="dbxTweaker\Main.resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
